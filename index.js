@@ -1,4 +1,4 @@
-const PORT = 8000    // for depoloy make: const PORT = process.env.PORT || 8000 
+const PORT = process.env.PORT || 8000 
 const express = require('express')
 const axios = require('axios')
 const cheerio = require('cheerio')
@@ -8,9 +8,69 @@ const app = express()
 
 const newspapers = [
     {
-        name: 'Independent',
+        name: 'independent',
         address: 'https://www.independent.co.uk/topic/dogs',
         base: 'https://www.independent.co.uk'
+    },
+    {
+        name: 'ap',
+        address: 'https://apnews.com/hub/dogs',
+        base: 'https://apnews.com'
+    },
+    {
+        name: 'nbc',
+        address: 'https://www.nbcnews.com/search/?q=dog',
+        base: 'https://www.nbc.com'
+    },
+    {
+        name: 'google',
+        address: 'https://news.google.com/search?q=dog&hl=en-US&gl=US&ceid=US%3Aen',
+        base: 'https://news.google.com'
+    },
+    {
+        name: 'cnn',
+        address: 'https://www.cnn.com',
+        // base: 'https://www.cnn.com'
+    },
+    {
+        name: 'yahoo',
+        address: 'https://news.yahoo.com',
+        // base: 'https://news.yahoo.com'
+    },
+    {
+        name: 'us',
+        address: 'https://www.usnews.com',
+        // base: 'https://www.usnews.com'
+    },
+    {
+        name: 'npr',
+        address: 'https://npr.org',
+        // base: 'https://npr.org'
+    },
+    {
+        name: 'fox',
+        address: 'https://www.foxnews.com',
+        // base: 'https://www.foxnews.com'
+    },
+    {
+        name: 'abc',
+        address: 'https://abcnews.go.com',
+        // base: 'https://abcnews.go.com'
+    },
+    {
+        name: 'bbc',
+        address: 'https://bbc.com',
+        // base: 'https://bbc.com'
+    },
+    {
+        name: 'cbs',
+        address: 'https://www.cbsnews.com',
+        // base: 'https://www.cbsnews.com'
+    },
+    {
+        name: 'un',
+        address: 'https://news.un.org',
+        // base: 'https://news.un.org'
     }
 
 ]
